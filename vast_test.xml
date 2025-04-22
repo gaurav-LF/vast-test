@@ -1,0 +1,81 @@
+<VAST version="3.0">
+  <Ad id="12345" sequence="1">
+    <InLine>
+      <!-- Ad System -->
+      <AdSystem version="1.0">AdServerName</AdSystem>
+      
+      <!-- Ad Title -->
+      <AdTitle>Sample Video Ad</AdTitle>
+      
+      <!-- Description -->
+      <Description>A sample VAST ad.</Description>
+
+      <!-- Impression Tracking -->
+      <Impression>
+        <![CDATA[ https://stories-api.90d.io/api/v2/tracks?event=impression&ad_id=1234567]]>
+      </Impression>
+
+    
+      <!-- Tracking Events -->
+      <Creatives>
+        <Creative id="1" sequence="1">
+          <Linear>
+            <!-- Duration -->
+            <Duration>00:00:15</Duration>
+             <TrackingEvents>
+             
+              <Tracking event="firstQuartile">
+                <![CDATA[
+                  https://stories-api.90d.io/api/v2/tracks?event=firstQuartile&ad_id=1234567
+
+                ]]>
+              </Tracking>
+              <Tracking event="midpoint">
+                <![CDATA[
+                  https://stories-api.90d.io/api/v2/tracks?event=midpoint&ad_id=1234567
+                ]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+                <![CDATA[
+                  https://stories-api.90d.io/api/v2/tracks?event=thirdQuartile&ad_id=1234567
+                ]]>
+              </Tracking>
+              <Tracking event="complete">
+                <![CDATA[
+                  https://stories-api.90d.io/api/v2/tracks?event=complete&ad_id=1234567
+                ]]>
+              </Tracking>
+            </TrackingEvents> 
+            
+
+            <!-- Video Clicks -->
+            <VideoClicks>
+              <!-- ClickThrough URL (When the user clicks on the ad) -->
+              <ClickThrough>
+                <![CDATA[ https://stories-api.90d.io/api/v2/tracks?event=complete&ad_id=1234567 ]]>
+              </ClickThrough>
+              
+              <!-- Optional Click Tracking URL -->
+              <!-- <ClickTracking>
+                <![CDATA[ https://stories-api.90d.io/api/v2/tracks?event=complete&ad_id=1234567 ]]>
+              </ClickTracking> -->
+            </VideoClicks>
+
+            <!-- Media File (Actual video ad URL) -->
+            <MediaFiles>
+              <MediaFile id="preview" delivery="progressive" type="image/jpg" width="640" height="360">
+                <![CDATA[https://d3c8m2nf0yaryn.cloudfront.net/PaintCareCoverPhoto.jpg]]>
+              </MediaFile>
+
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360" bitrate="500" scalable="true" maintainAspectRatio="true">
+                <![CDATA[ https://dzs6a98gfqi0x.cloudfront.net/paintCare.mp4 ]]>
+              </MediaFile>
+            </MediaFiles>
+
+          </Linear>
+        </Creative>
+        
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
