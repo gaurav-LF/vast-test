@@ -46,21 +46,6 @@
                 ]]>
               </Tracking>
             </TrackingEvents> 
-            
-
-            <!-- Video Clicks -->
-            <VideoClicks>
-              <!-- ClickThrough URL (When the user clicks on the ad) -->
-              <ClickThrough>
-                <![CDATA[ https://stories-api.90d.io/api/v2/tracks?event=complete&ad_id=1234567 ]]>
-              </ClickThrough>
-              
-              <!-- Optional Click Tracking URL -->
-              <!-- <ClickTracking>
-                <![CDATA[ https://stories-api.90d.io/api/v2/tracks?event=complete&ad_id=1234567 ]]>
-              </ClickTracking> -->
-            </VideoClicks>
-
             <!-- Media File (Actual video ad URL) -->
             <MediaFiles>
               <MediaFile id="preview" delivery="progressive" type="image/jpg" width="640" height="360">
